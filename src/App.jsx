@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import './reset.css'
+import "./reset.css";
+import { Outlet } from "react-router";
 
 function App() {
-  const [count, setCount] = useState(0)
-  return null
+  return (
+    <>
+      <Outlet />
+    </>
+  );
 }
 
-export default App
+export default App;
