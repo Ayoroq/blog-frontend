@@ -18,7 +18,7 @@ export function PostProvider({ children }) {
         );
         if (response.ok) {
           const data = await response.json();
-          setPosts(data.posts);
+          setPosts(data);
         } else {
           setError("Failed to fetch posts");
         }
