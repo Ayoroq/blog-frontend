@@ -1,6 +1,7 @@
 import styles from "./p.module.css";
 import { useEffect, useContext } from "react";
 import PostContext from "../context/PostContext";
+import Articles from "../components/Articles.jsx";
 export default function Home() {
   const { posts, loading, error } = useContext(PostContext);
   useEffect(() => {
@@ -15,13 +16,7 @@ export default function Home() {
       {loading && null}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <section className={styles.articleContainer}>
-          {posts.map((post) => (
-            <article key={post.id} className={styles.article}>
-              <h2 className={styles.title}>{post.title}</h2>
-            </article>
-          ))}
-        </section>
+        <Articles articles={posts} />
       )}
     </main>
   );
