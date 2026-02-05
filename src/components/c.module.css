@@ -1,7 +1,15 @@
 /* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
 .logo {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   background: #3f5efb;
   background: linear-gradient(
     rgba(63, 94, 251, 1) 0%,

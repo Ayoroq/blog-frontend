@@ -3,6 +3,8 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -17,9 +19,14 @@
   }
 }
 
+body, html {
+  font-family: "Archivo", sans-serif;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-color: #F4F4F4;
 }
 
 img, picture, video, canvas, svg {
