@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ReactLenis } from "lenis/react";
 import { PostProvider } from "./context/PostContext.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 function App() {
   const lenisRef = useRef();
@@ -22,6 +23,7 @@ function App() {
     <>
       <ReactLenis root options={{ autoRaf: false }} ref={lenisRef}></ReactLenis>
         <PostProvider>
+          <Navbar />
           <Outlet />
         </PostProvider>
     </>
