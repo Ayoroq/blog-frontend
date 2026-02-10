@@ -1,0 +1,16 @@
+import styles from "./c.module.css";
+export default function Thumbnails({ articles }) {
+  return (
+    <section>
+      {articles.map((article) => (
+        <article key={article.id}>
+          <img src={article.thumbnail_url} alt={article.title} />
+          <div>
+            <h2>{article.title}</h2>
+            <p>{article.description}</p>
+          </div>
+        </article>
+      ))}
+    </section>
+  );
+}

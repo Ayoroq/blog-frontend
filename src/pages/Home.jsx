@@ -1,7 +1,7 @@
 import styles from "./p.module.css";
 import { useEffect, useContext } from "react";
 import PostContext from "../context/PostContext";
-import Articles from "../components/Articles.jsx";
+import Thumbnails from "../components/Thumbnails.jsx";
 export default function Home() {
   const { posts, loading, error } = useContext(PostContext);
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Home() {
       {loading && null}
       {error && <p>{error}</p>}
       {!loading && !error && (
-        <Articles articles={posts} />
+        <Thumbnails articles={posts} />
       )}
     </main>
   );
