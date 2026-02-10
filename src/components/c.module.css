@@ -16,4 +16,5 @@
     rgba(252, 70, 107, 1) 100%
   );
   border-radius: 50%;
+  cursor: pointer;
 }
