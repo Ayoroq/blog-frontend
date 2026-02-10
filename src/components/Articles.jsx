@@ -1,4 +1,5 @@
 import styles from "./c.module.css";
+import Markdown from 'react-markdown'
 export default function Articles({ articles }) {
   return (
     <section>
@@ -7,7 +8,8 @@ export default function Articles({ articles }) {
           <div>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
-            <p>{article.content}</p>
+            <img src={article.thumbnail_url} alt={article.title} />
+            <Markdown>{article.content}</Markdown>
           </div>
         </article>
       ))}
