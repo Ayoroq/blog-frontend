@@ -1,18 +1,25 @@
 import styles from "./c.module.css";
-import Markdown from 'react-markdown'
+import { useNavigate } from "react-router";
+import Markdown from "react-markdown";
 export default function Articles({ articles }) {
+  const navigate = useNavigate();
   return (
-    <section>
-      {articles.map((article) => (
-        <article key={article.id}>
-          <div>
-            <h2>{article.title}</h2>
-            <p>{article.description}</p>
-            <img src={article.thumbnail_url} alt={article.title} />
-            <Markdown>{article.content}</Markdown>
-          </div>
-        </article>
-      ))}
-    </section>
+    <main>
+      <section>
+        <button onClick={() => navigate(-1)}>Go Back</button>
+      </section>
+      <section>
+        {articles.map((article) => (
+          <article key={article.id}>
+            <div>
+              <h2>{article.title}</h2>
+              <p>{article.description}</p>
+              <img src={article.thumbnail_url} alt={article.title} />
+              <Markdown>{article.content}</Markdown>
+            </div>
+          </article>
+        ))}
+      </section>
+    </main>
   );
 }

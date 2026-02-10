@@ -1,12 +1,9 @@
 import styles from "./p.module.css";
-import { useEffect, useContext } from "react";
+import { useContext } from "react";
 import PostContext from "../context/PostContext";
 import Thumbnails from "../components/Thumbnails.jsx";
 export default function Home() {
   const { posts, loading, error } = useContext(PostContext);
-  useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-  }, []);
   return (
     <main className={styles.Home}>
       <h1 className={styles.mainText}>
@@ -15,9 +12,7 @@ export default function Home() {
       </h1>
       {loading && null}
       {error && <p>{error}</p>}
-      {!loading && !error && (
-        <Thumbnails articles={posts} />
-      )}
+      {!loading && !error && <Thumbnails articles={posts} />}
     </main>
   );
 }
