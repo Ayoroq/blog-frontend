@@ -19,7 +19,7 @@ export default function Article() {
 
   return (
     <main className={styles.Article}>
-      {article && <Articles articles={[article]} />}
+      {article && <Articles article={article}/>}
     </main>
   );
 }
