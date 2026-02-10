@@ -4,7 +4,7 @@ export default function Articles({ articles }) {
     <section>
       {articles.map((article) => (
         <article key={article.id}>
-          <img src={article.image} alt={article.title} />
+          <img src={article.thumbnail_url} alt={article.title} />
           <div>
             <h2>{article.title}</h2>
             <p>{article.description}</p>
