@@ -15,7 +15,7 @@ export default function Article() {
   if (loading) return null;
   if (error) return <p>{error}</p>;
 
-  const article = posts.find((post) => post.id === parseInt(id));
+  const article = posts.find((post) => post.id === id);
 
   return (
     <main className={styles.Article}>

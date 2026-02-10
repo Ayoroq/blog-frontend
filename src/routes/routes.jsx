@@ -1,5 +1,6 @@
 import App from '../App.jsx';
 import Home from '../pages/Home.jsx';
+import Article from '../pages/Article.jsx';
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: 'articles/:id/:slug?',
+        element: <Article />,
       },
     ],
   },
