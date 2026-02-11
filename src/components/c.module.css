@@ -23,7 +23,7 @@
 .Thumbnails{
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .Thumbnail{
@@ -36,10 +36,15 @@
   max-height: 200px;
   object-fit: cover;
   border-radius: 10px;
+  transition: transform linear 0.2s;
 }
 
 .Thumbnail:hover .ThumbnailTitle {
   text-decoration: underline;
+}
+
+.Thumbnail:hover .ThumbnailImage{
+  transform: translateY(-10px);
 }
 
 
