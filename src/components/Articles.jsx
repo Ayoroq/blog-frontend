@@ -16,7 +16,7 @@ export default function Articles({ article }) {
         </div>
         <div>
           <h3>Ayodeji</h3>
-          <p>{formatDate(article.createdAt)}</p>
+          <time>{formatDate(article.createdAt)}</time>
         </div>
       </section>
       <section>
