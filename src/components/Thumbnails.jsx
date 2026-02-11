@@ -29,7 +29,7 @@ export default function Thumbnails({ articles }) {
           <div>
 
             <time>{formatDate(article.createdAt)}</time>
-            <h2>{article.title}</h2>
+            <h2 className={styles.ThumbnailTitle}>{article.title}</h2>
             <p>{article.description}</p>
           </div>
         </article>
