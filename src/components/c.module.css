@@ -19,6 +19,25 @@
   cursor: pointer;
 }
 
+/* Thumbnails */
+.Thumbnails{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.Thumbnail{
+  max-width: 400px;
+  cursor: pointer;
+}
+
+.ThumbnailImage{
+  width: 400px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
 
 /* Main Article page */
 .Article{

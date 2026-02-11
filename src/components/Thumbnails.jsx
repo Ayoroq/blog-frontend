@@ -18,13 +18,14 @@ export default function Thumbnails({ articles }) {
   }
 
   return (
-    <section>
+    <section className={styles.Thumbnails}>
       {articles.map((article) => (
         <article
           key={article.id}
           onClick={() => handleClick(article.id, article.title)}
+          className={styles.Thumbnail}
         >
-          <img src={article.thumbnail_url} alt={article.title} />
+          <img className={styles.ThumbnailImage} src={article.thumbnail_url} alt={article.title} />
           <div>
 
             <time>{formatDate(article.createdAt)}</time>
